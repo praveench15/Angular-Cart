@@ -43,7 +43,7 @@ angular.module('appStore',['ngRoute'])
 		var refThis = this;
 		
 		if(!this.items){
-			http.get('data/data.json').success(function(data){
+			http.get('/data/data.json').success(function(data){
 				refThis.items=data;
 				callback(data);
 		});
