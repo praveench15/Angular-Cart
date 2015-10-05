@@ -16,10 +16,10 @@ angular.module('appStore',['ngRoute'])
 .controller("appController",['$scope','storeService',function(scope, storeService){
 
 	storeService.getStoreItems(function(data){
-	
+
 		scope.items = data;
 	})
-	
+		console.log("scope.items "+ scope.items);
 	scope.cart = storeService;
 	
 	scope.selectedFilter = [];
@@ -44,10 +44,12 @@ angular.module('appStore',['ngRoute'])
 		
 		if(!this.items){
 			http.get('/data/data.json').success(function(data){
+				console.log("Data "+ data);
 				refThis.items=data;
 				callback(data);
 		});
 		}else{
+			console.log("In Else Data "+ this.items);
 			callback(this.items);
 		}
 	}
