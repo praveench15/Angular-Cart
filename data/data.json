@@ -1,1 +1,154 @@
-[{"id":1,"category":"phone","name":"Samsung","src":"sample.jpg","description":"Samsung Mobile.","price":9000,"$$hashKey":"object:3"},{"id":2,"category":"phone","name":"Panasonic","src":"sample.jpg","description":"Panasonic Mobile.","price":3000,"$$hashKey":"object:4"},{"id":3,"category":"phone","name":"LG","src":"sample.jpg","description":"Motorola Mobile.","price":4500,"$$hashKey":"object:5"},{"id":4,"category":"laptop","name":"HP","src":"sample.jpg","description":"HP Lap.","price":45000,"$$hashKey":"object:6"},{"id":5,"category":"laptop","name":"Dell","src":"sample.jpg","description":"Dell Lap.","price":20000,"$$hashKey":"object:7"},{"id":6,"category":"laptop","name":"Asus","src":"sample.jpg","description":"Asus Lap.","price":35000,"$$hashKey":"object:8"},{"id":7,"category":"desktop","name":"Dell","src":"sample.jpg","description":"Dell Desk.","price":15000,"$$hashKey":"object:9"},{"id":8,"category":"desktop","name":"HP","src":"sample.jpg","description":"HP Desk.","price":50000,"$$hashKey":"object:10"},{"id":9,"category":"desktop","name":"IBM","src":"sample.jpg","description":"IBM Desk.","price":30000,"$$hashKey":"object:11"}]
+[  
+   {  
+      "id":1,
+      "category":"phone",
+      "name":"Samsung",
+      "src":"mob1.jpg",
+      "description":"Samsung Mobile.",
+      "price":9000
+   },
+   {  
+      "id":2,
+      "category":"phone",
+      "name":"Panasonic",
+      "src":"mob2.jpg",
+      "description":"Panasonic Mobile.",
+      "price":3000
+   },
+   {  
+      "id":3,
+      "category":"phone",
+      "name":"LG",
+      "src":"mob3.jpg",
+      "description":"Motorola Mobile.",
+      "price":4500
+   },
+   {  
+      "id":4,
+      "category":"laptop",
+      "name":"HP",
+      "src":"lap1.jpg",
+      "description":"HP Lap.",
+      "price":45000
+   },
+   {  
+      "id":5,
+      "category":"laptop",
+      "name":"Dell",
+      "src":"lap2.jpg",
+      "description":"Dell Lap.",
+      "price":20000
+   },
+   {  
+      "id":6,
+      "category":"laptop",
+      "name":"Asus",
+      "src":"lap3.jpg",
+      "description":"Asus Lap.",
+      "price":35000
+   },
+   {  
+      "id":7,
+      "category":"desktop",
+      "name":"Dell",
+      "src":"desk1.jpg",
+      "description":"Dell Desk.",
+      "price":15000
+   },
+   {  
+      "id":8,
+      "category":"desktop",
+      "name":"HP",
+      "src":"desk2.jpg",
+      "description":"HP Desk.",
+      "price":50000
+      
+   },
+   {  
+      "id":9,
+      "category":"desktop",
+      "name":"IBM",
+      "src":"desk3.jpg",
+      "description":"IBM Desk.",
+      "price":30000
+      
+   },
+   
+   {  
+      "id":11,
+      "category":"phone",
+      "name":"Samsung",
+      "src":"sample.jpg",
+      "description":"Samsung Mobile.",
+      "price":9000
+      
+   },
+   {  
+      "id":12,
+      "category":"phone",
+      "name":"Panasonic",
+      "src":"sample.jpg",
+      "description":"Panasonic Mobile.",
+      "price":3000
+      
+   },
+   {  
+      "id":13,
+      "category":"phone",
+      "name":"LG",
+      "src":"sample.jpg",
+      "description":"Motorola Mobile.",
+      "price":4500
+      
+   },
+   {  
+      "id":14,
+      "category":"laptop",
+      "name":"HP",
+      "src":"sample.jpg",
+      "description":"HP Lap.",
+      "price":45000
+      
+   },
+   {  
+      "id":15,
+      "category":"laptop",
+      "name":"Dell",
+      "src":"sample.jpg",
+      "description":"Dell Lap.",
+      "price":20000
+      
+   },
+   {  
+      "id":16,
+      "category":"laptop",
+      "name":"Asus",
+      "src":"sample.jpg",
+      "description":"Asus Lap.",
+      "price":35000
+   },
+   {  
+      "id":17,
+      "category":"desktop",
+      "name":"Dell",
+      "src":"sample.jpg",
+      "description":"Dell Desk.",
+      "price":15000
+   },
+   {  
+      "id":18,
+      "category":"desktop",
+      "name":"HP",
+      "src":"sample.jpg",
+      "description":"HP Desk.",
+      "price":50000
+   },
+   {  
+      "id":19,
+      "category":"desktop",
+      "name":"IBM",
+      "src":"sample.jpg",
+      "description":"IBM Desk.",
+      "price":30000
+   }
+]
