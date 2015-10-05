@@ -13,24 +13,24 @@ angular.module('appStore',['ngRoute'])
       });
   }])
 
-.controller("appController",['$scope','storeService',function(scope, storeService){
+.controller("appController",['$rootScope','$scope','storeService',function(rootScope,scope, storeService){
 
 	storeService.getStoreItems(function(data){
 
 		scope.items = data;
 	})
-		console.log("scope.items "+ scope.items);
+		//console.log("scope.items "+ scope.items);
 	scope.cart = storeService;
 	
-	scope.selectedFilter = [];
+	rootScope.selectedFilter = [];
 	
 	scope.itemFilter = function (category) {
         
-		scope.selectedFilter = [];
-		if(category){console.log("...." + category);
-			scope.selectedFilter.push(category);
+		rootScope.selectedFilter = [];
+		if(category){//console.log("...." + category);
+			rootScope.selectedFilter.push(category);
 			
-			console.log(scope.selectedFilter);
+			console.log(rootScope.selectedFilter);
 			}
 	};
 }])
@@ -44,15 +44,46 @@ angular.module('appStore',['ngRoute'])
 		
 		if(!this.items){
 			http.get('data/data.json').success(function(data){
-				console.log("Data "+ data);
+				//console.log("Data "+ data);
 				refThis.items=data;
 				callback(data);
 		});
 		}else{
-			console.log("In Else Data "+ this.items);
+			//console.log("In Else Data "+ this.items);
 			callback(this.items);
 		}
 	}
+	
+	this.getCartItemsCount = function(){
+		var totalCount = 0;
+            var items = this.cartitems;
+            angular.forEach(items, function (item) {
+                totalCount += item.qty;
+            });
+        return totalCount;
+	}
+	
+	this.cartitems={}
+
+	this.addToCart = function(item){
+	console.log("Item Id "+ item.id + " isChecked "+item.checked + " quantity "+item.qty);
+	
+	if(item.checked){
+
+	if(!this.cartitems[item.id]){
+		this.cartitems[item.id]={qty:item.qty*1};
+		item.qty = "";
+		item.checked = false;
+	}else{
+		var olditem = this.cartitems[item.id];
+		olditem.qty+=item.qty*1;
+		item.qty = "";
+		item.checked = false;
+	}
+	} else {
+		alert(" Please select item and fill quantity");
+	}
+}
  }])
 
 .service("cartService",['$http',function(http){
@@ -65,12 +96,12 @@ angular.module('appStore',['ngRoute'])
 		//console.log("1 "+items+ " "+ selectedFilter + " "+ selectedFilter.length);
 		var filteredItems = [];
 	
-	if(selectedFilter.length > 0){
+	if(null!=selectedFilter && selectedFilter.length > 0){
 	//console.log("2 "+ selectedFilter.length);
 		for (var i = 0; i < items.length; i++) {
 		//console.log("3 " + items[i].category + " " + selectedFilter);
 			if(items[i].category==selectedFilter) {
-					console.log("....  "+ filteredItems);
+					//console.log("....  "+ filteredItems);
                 filteredItems.push(items[i]);
 				
 				}

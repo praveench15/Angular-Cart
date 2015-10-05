@@ -1,1 +1,30 @@
 
+<div class="row">
+	  
+	  <div class="product-listing"> <h2>Item List View</h2>
+	  <ul>
+	  
+	  <li ng-repeat="item in items | itemFilter:selectedFilter">  
+	  
+	  
+	  <a ng-href="" ng-click="" ng-class="" tabindex="0" > {{item.name}} - Price : {{ item.price | currency:"Rs "}}
+	  </a>
+	  
+	  
+	  <img src = images/{{item.src}} style="height: 150px;width: 150px;">
+
+	<br> <br> 
+	  
+	  
+	  <input type="checkbox" ng-model="item.checked">
+	  
+	  Quantity<input type="text" ng-model="item.qty" style="width: 35px;height:30px" >
+
+	  <br>
+	  <button type="button" ng-click="cart.addToCart(item)" class="btn btn-inverse btn-block"><span id="cart-total">Add to Cart</span></button>
+	  
+	  </li>
+	  
+	  </ul>
+	  </div>
+	  </div>
