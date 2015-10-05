@@ -118,13 +118,13 @@ li {
 				<div class="container">
 				<div class="row">
 					<div class="navbar-header col-sm-4">
-						<img src="images/logo1.png" alt="Logo">
+						<img src="images/logo.png" alt="Logo">
 					</div>
 				<div class="col-sm-5"> </div>
 
 <div class="col-sm-3">
 	<div id="cart" class="btn-group btn-block">
-		<button type="button" class="btn btn-inverse btn-block btn-lg"><i class=""></i> <span id="cart-total">{{cart.getCartItems()}} item(s) - {{ cart.totalItemsCost() | currency:"Rs" }}</span></button>
+		<button type="button" class="btn btn-inverse btn-block btn-lg"><i class=""></i> <span id="cart-total">{{cart.getCartItemsCount()}} item(s) </span></button>
 	</div>
 </div>
 	</div>
@@ -139,45 +139,19 @@ li {
   <div class="row"><column id="column-left" class="col-sm-3 hidden-xs">
     <div class="list-group">
       <a class="list-group-item active">Items Filter</a>
-        <a class="list-group-item" ng-click="itemFilter(null)">All</a>
+        <a class="list-group-item" ng-click="selectedFilter=null">All</a>
 		<a class="list-group-item" ng-click="selectedFilter='phone'">Mobile</a>
-		<a class="list-group-item" ng-click="itemFilter('laptop')">LapTop</a>
-		<a class="list-group-item" ng-click="itemFilter('desktop')">Desktop</a>
+		<a class="list-group-item" ng-click="selectedFilter='laptop'">LapTop</a>
+		<a class="list-group-item" ng-click="selectedFilter='desktop'">Desktop</a>
 		
     </div>
  </column>
                 <div id="content" class="col-sm-9">      
             
       <hr>
-      <br>
-	  <!--<div ng-view></div>-->
-	  <div class="row">
+      
+	  <div ng-view></div>
 	  
-	  <div class="product-listing"> <h2>Item List View</h2>
-	  <ul>
-	  
-	  <li ng-repeat="item in items | itemFilter:selectedFilter">  
-	  
-	  
-	  <a ng-href="" ng-click="" ng-class="" tabindex="0" > {{item.name}} - Price : {{ item.price | currency:"Rs "}}
-	  </a>
-	  
-	  
-	  <img src = "https://cloud.githubusercontent.com/assets/14966129/10281211/7ec2267e-6b90-11e5-8b74-d4b52223df49.jpg">
-	  
-	  
-	  
-	  <input type="checkbox" ng-model="item.checked">
-	  
-	  Quantity<input type="text" ng-model="item.qty" style="width: 35px;height:30px" >
-	  <br><br><br>
-	  <button type="button" ng-click="cart.addItem('1','LG','200',1);" class="btn btn-inverse btn-block"><span id="cart-total">Add to Cart</span></button>
-	  
-	  </li>
-	  
-	  </ul>
-	  </div>
-	  </div>
 	  
 	  </div>
       </div>
