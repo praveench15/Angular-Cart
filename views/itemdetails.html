@@ -1,0 +1,21 @@
+<div class="row">
+
+	<h2> Item Details </h2> <a onClick="javascript:history.go(-1);"> << back</a>
+	 <div class="col-md-9">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Item Id </th><th>Item Name</th><th>Item Description</th><th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+				<img src = images/{{item.src}}>
+                <td>{{item.id}}</td><td>{{item.name}}</td><td>{{item.description}}</td>
+				<td>{{item.price}}</td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+	  </div>
