@@ -35,6 +35,13 @@ angular.module('appStore',['ngRoute'])
 	};
 }])
 
+.controller("itemdetailsController",['$scope','storeService','$routeParams',function(scope,storeService,routeParams){
+console.log("Item Id "+ routeParams.itemId);
+	scope.item = storeService.getItemByid(routeParams.itemId);
+
+
+}])
+
 .service("storeService",['$http',function(http){
 
  this.items = null;
@@ -63,6 +70,18 @@ angular.module('appStore',['ngRoute'])
         return totalCount;
 	}
 	
+	this.getItemByid = function(itemId){
+	
+	 var items = this.items;
+	 var itemObj;
+            angular.forEach(items, function (item) {
+	           if  (item.id == itemId) {
+	                itemObj = item;
+                }
+            });
+			return itemObj;
+        };
+		
 	this.cartitems={}
 
 	this.addToCart = function(item){
