@@ -1,17 +1,19 @@
 
 <div class="row">
-	  
+	  <h2> List View Items </h2>
 	  <div class="product-listing">
 	  <ul>
 	  
 	  <li ng-repeat="item in items | itemFilter:selectedFilter">  
 	  
 	  
-	  <a ng-href="" ng-click="" ng-class="" tabindex="0" > {{item.name}} - Price : {{ item.price | currency:"Rs "}}
-	  </a>
+	   {{item.name}} - Price : {{ item.price | currency:"Rs "}}
 	  
 	  
+	   <a href="#item/{{item.id}}" >
 	  <img src = images/{{item.src}} style="height: 150px;width: 150px;">
+	  
+	  </a>
 
 	<br> <br> 
 	  
